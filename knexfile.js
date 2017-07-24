@@ -4,7 +4,6 @@ module.exports = {
 
   development: {
     client: 'postgresql',
-    connection: 
+    connection: 'postgres://localhost/2017-0724_express'
   }
-
 };
