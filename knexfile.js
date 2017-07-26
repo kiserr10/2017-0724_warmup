@@ -1,9 +1,15 @@
 // Update with your config settings.
 
-module.exports = {
+const dotenv = require('dotenv').config();
 
-  development: {
-    client: 'postgresql',
-    connection: 'postgres://localhost/pets-warmup'
-  }
+
+module.exports = {
+	development: {
+		client: 'postgresql',
+		connection: 'postgres://localhost/pets-warmup'
+	},
+	production: {
+		client: 'postgresql',
+		connection: process.env.DATABASE_URL + '?ssl=true'
+	}
 };
